@@ -1,42 +1,58 @@
 # Employee-tracker
-A command-line application to manage a company's employee database.
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Design the database schema as shown in the following image:
+## Screen Recording + Image of application walk-through:
 
-![Database schema includes tables labeled “employee,” role,” and “department.”](./Assets/12-sql-homework-demo-01.png)
 
-As the image illustrates, your schema should contain the following three tables:
 
-* `department`
+## Table of Contents
 
-    * `id`: `INT PRIMARY KEY`
+* [Description](#description)
+* [Contributors](#contributors)
+* [Installation](#installation)
+* [Tests](#tests)
+* [Questions](#questions)
 
-    * `name`: `VARCHAR(30)` to hold department name
 
-* `role`
+## Description
 
-    * `id`: `INT PRIMARY KEY`
+A command-line application designed to manage a company's employee database.
 
-    * `title`: `VARCHAR(30)` to hold role title
 
-    * `salary`: `DECIMAL` to hold role salary
+## Contributors
 
-    * `department_id`: `INT` to hold reference to department role belongs to
+Code debugging through ChatGPT
 
-* `employee`
 
-    * `id`: `INT PRIMARY KEY`
 
-    * `first_name`: `VARCHAR(30)` to hold employee first name
+## Installation
 
-    * `last_name`: `VARCHAR(30)` to hold employee last name
+To install necessary dependencies, run the following command: 
 
-    * `role_id`: `INT` to hold reference to employee role
+```
+npm install mysql2
 
-    * `manager_id`: `INT` to hold reference to another employee that is the manager of the current employee (`null` if the employee has no manager)
+```
 
-You might want to use a separate file that contains functions for performing specific SQL queries you'll need to use. 
 
-A constructor function or class could be helpful for organizing these. 
+## Tests
 
-You might also want to include a `seeds.sql` file to pre-populate your database, making the development of individual features much easier.
+To perform tests, run the following command:
+
+```
+npm run seed
+npm run start
+node server
+```
+To log in to your own SQL for testing, run the following command (and enter logins):
+
+```
+mysql -u root -p
+```
+
+
+## Questions
+
+For any questions about this project, contact the author at tiffanyrengland@gmail.com. 
+
+To view more of my work, you can visit my GitHub - [Trengland](https://www.github.com/Trengland/).
