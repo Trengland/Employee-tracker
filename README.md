@@ -34,8 +34,12 @@ Code debugging through ChatGPT
 To install necessary dependencies, run the following command: 
 ```
 npm install
+```
+```
 npm install mysql2
-
+```
+```
+npm install handlebars
 ```
 
 
@@ -44,7 +48,11 @@ npm install mysql2
 To perform tests, run the following command:
 ```
 npm run seed
+```
+```
 npm run start
+```
+```
 node server
 ```
 
