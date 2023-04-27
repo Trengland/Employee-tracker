@@ -3,18 +3,33 @@ CREATE DATABASE employee_db;
 
 USE employee_db;
 
-CREATE TABLE employees(
-  id INT NOT NULL,
-  emp_name VARCHAR(100) NOT NULL,
-  dept_name VARCHAR(50) NOT NULL,
-  hourly_wage INT NOT NULL,
-  currently_employed BOOLEAN
+CREATE TABLE department(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(30) UNIQUE NOT NULL
 );
 
-CREATE TABLE employee_score(
-  id INT NOT NULL,
-  emp_name VARCHAR(100) NOT NULL,
-  dept_name VARCHAR(50) NOT NULL,
-  emp_score INT (10) NOT NULL
+
+CREATE TABLE role(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(30) UNIQUE NOT NULL,
+  salary DECIMAL NOT NULL,
+  department_id INT NOT NULL,
+  INDEX dep_index (department_id),
+  CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE
 );
+
+
+CREATE TABLE employee(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  role_id INT NOT NULL,
+  INDEX role_index (role_id),
+  CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE,
+  manager_id INT,
+  INDEX mgr_index (manager_id),
+  CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
+);
+
+
 
