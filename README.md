@@ -19,8 +19,8 @@
 
 ## Description
 
-A command-line application designed to manage a company's employee database./
-A user can look up the entire employee db, add employees, roles or departments./
+A command-line application designed to manage a company's employee database.\
+A user can look up the entire employee db, add employees, roles or departments.\
 Also updating and removing all of the above, and looking at overall department budgets.
 
 
