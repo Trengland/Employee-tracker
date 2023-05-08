@@ -24,7 +24,7 @@ function mainMenuPrompt()  {
     'Remove department',
     'Remove role',
     'Update employee role',
-    'Updtate employee manager',
+    'Update employee manager',
     'View department budgets',
     'Quit'
   ]   
@@ -68,11 +68,11 @@ function mainMenuPrompt()  {
         case 'View department budgets':
             viewDepartmentBudgets();
             break;
-            default:
-                quit()
+        default:
+            quit();
     }
-})
-};
+});
+}
 
 // const addEmployeePrompt = [
 //   {
